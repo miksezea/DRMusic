@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRMusic", "DRMusic\DRMusic.csproj", "{A92800E0-3A46-4EF7-9C33-D7816BBC6C4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRMusic", "DRMusic\DRMusic.csproj", "{A92800E0-3A46-4EF7-9C33-D7816BBC6C4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRMusicTests", "DRMusicTests\DRMusicTests.csproj", "{09D94014-D640-4C9C-9937-6B7FEBC3B6BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A92800E0-3A46-4EF7-9C33-D7816BBC6C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A92800E0-3A46-4EF7-9C33-D7816BBC6C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A92800E0-3A46-4EF7-9C33-D7816BBC6C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D94014-D640-4C9C-9937-6B7FEBC3B6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D94014-D640-4C9C-9937-6B7FEBC3B6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D94014-D640-4C9C-9937-6B7FEBC3B6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D94014-D640-4C9C-9937-6B7FEBC3B6BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
