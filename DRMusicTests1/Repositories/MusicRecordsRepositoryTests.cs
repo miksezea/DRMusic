@@ -13,6 +13,7 @@ namespace DRMusic.Repositories.Tests
     public class MusicRecordsRepositoryTests
     {
         private MusicRecordsRepository repository;
+        MusicRecord newRecord = new MusicRecord() { "My Way", "Frank Sinatra", 277, 1969};
 
         [TestInitialize]
         public void BeforeEachTest()
@@ -27,6 +28,12 @@ namespace DRMusic.Repositories.Tests
             Assert.IsNotNull(actual);
             Assert.AreEqual(2, actual.Count());
             Assert.AreEqual(typeof(List<MusicRecord>), actual.GetType());
+        }
+        [TestMethod()]
+        public void AddTest()
+        {
+            var actual = repository.GetAll();
+
         }
     }
 }

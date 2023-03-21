@@ -19,5 +19,12 @@ namespace DRMusic.Repositories
         {
             return new List<MusicRecord>(_musicRecords);
         }
+
+        public MusicRecord Add(MusicRecord record)
+        {
+            record.Id = _nextId++;
+            _musicRecords.Add(record);
+            return record;
+        }
     }
 }

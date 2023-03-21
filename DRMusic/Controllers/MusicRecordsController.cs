@@ -37,9 +37,29 @@ namespace DRMusic.Controllers
         }
 
         // POST api/<MusicRecordsController>
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<MusicRecord> Post([FromBody] MusicRecord value)
         {
+            try
+            {
+                MusicRecord createdRecord = _repository.Add(value);
+                return Created($"api/Musicrecords/{createdRecord.Id}", createdRecord);
+                //return Created($"/{createdPokemen.Id}", createdPokemen);
+            }
+            catch (ArgumentNullException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // PUT api/<MusicRecordsController>/5
