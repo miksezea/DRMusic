@@ -26,5 +26,10 @@ namespace DRMusic.Repositories
             _musicRecords.Add(record);
             return record;
         }
+
+        public MusicRecord Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
