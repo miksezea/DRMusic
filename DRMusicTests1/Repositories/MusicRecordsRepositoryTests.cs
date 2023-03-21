@@ -13,7 +13,7 @@ namespace DRMusic.Repositories.Tests
     public class MusicRecordsRepositoryTests
     {
         private MusicRecordsRepository repository;
-        MusicRecord newRecord = new MusicRecord() { "My Way", "Frank Sinatra", 277, 1969};
+        MusicRecord newRecord = new MusicRecord() { Id = 3, Title = "My Way", Artist = "Frank Sinatra", Duration = 277, PublicationYear = 1969};
 
         [TestInitialize]
         public void BeforeEachTest()
@@ -33,7 +33,12 @@ namespace DRMusic.Repositories.Tests
         public void AddTest()
         {
             var actual = repository.GetAll();
+            MusicRecord testRecord = repository.Add(newRecord);
 
+
+            Assert.IsNotNull(testRecord);
+            Assert.AreEqual(actual.Count + 1, repository.GetAll().Count());
+            Assert.AreEqual(3, testRecord.Id);
         }
     }
 }
