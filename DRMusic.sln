@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRMusic", "DRMusic\DRMusic.csproj", "{A92800E0-3A46-4EF7-9C33-D7816BBC6C4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRMusicTests1", "DRMusicTests1\DRMusicTests1.csproj", "{BA351AB1-F784-4D85-A1A6-20EF9D5C266A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRMusicTests", "DRMusicTests1\DRMusicTests.csproj", "{BA351AB1-F784-4D85-A1A6-20EF9D5C266A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
