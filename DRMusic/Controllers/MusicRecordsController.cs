@@ -19,9 +19,9 @@ namespace DRMusic.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [HttpGet]
-        public ActionResult<IEnumerable<MusicRecord>> Get()
+        public ActionResult<IEnumerable<MusicRecord>> Get([FromQuery] string? title, [FromQuery] string? artist)
         {
-            List<MusicRecord> result = _repository.GetAll();
+            List<MusicRecord> result = _repository.GetAll(title, artist);
             if(result.Count < 1)
             {
                 return NoContent();

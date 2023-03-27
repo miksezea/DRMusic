@@ -15,9 +15,18 @@ namespace DRMusic.Repositories
             };
         }
 
-        public List<MusicRecord> GetAll()
+        public List<MusicRecord> GetAll(string title = null, string artist = null)
         {
-            return new List<MusicRecord>(_musicRecords);
+            List<MusicRecord> result = new List<MusicRecord>(_musicRecords);
+            if (title != null)
+            {
+                return result.FindAll(x=>x.Title.Contains(title, StringComparison.InvariantCultureIgnoreCase));
+            }
+            if (artist != null)
+            {
+                return result.FindAll(x=>x.Artist.Contains(artist, StringComparison.InvariantCultureIgnoreCase));
+            }
+            return result;
         }
 
         public MusicRecord Add(MusicRecord record)
