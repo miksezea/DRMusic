@@ -18,13 +18,18 @@ namespace DRMusic.Repositories
         public List<MusicRecord> GetAll(string title = null, string artist = null)
         {
             List<MusicRecord> result = new List<MusicRecord>(_musicRecords);
-            if (title != null)
+            if (title != null && artist == null)
             {
                 return result.FindAll(x=>x.Title.Contains(title, StringComparison.InvariantCultureIgnoreCase));
             }
-            if (artist != null)
+            if (title == null && artist != null)
             {
                 return result.FindAll(x=>x.Artist.Contains(artist, StringComparison.InvariantCultureIgnoreCase));
+            }
+            if(title != null && artist != null)
+            {
+                return result.FindAll(x=>x.Title.Contains(title, StringComparison.InvariantCultureIgnoreCase) && x.Artist.Contains(title, StringComparison.InvariantCultureIgnoreCase));
+
             }
             return result;
         }
