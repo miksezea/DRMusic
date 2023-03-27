@@ -20,11 +20,11 @@ namespace DRMusic.Repositories
             List<MusicRecord> result = new List<MusicRecord>(_musicRecords);
             if (title != null)
             {
-                return result.FindAll(x=>x.Title.Contains(title, StringComparison.InvariantCultureIgnoreCase));
+                return result.FindAll(x => x.Title.Contains(title, StringComparison.InvariantCultureIgnoreCase));
             }
             if (artist != null)
             {
-                return result.FindAll(x=>x.Artist.Contains(artist, StringComparison.InvariantCultureIgnoreCase));
+                return result.FindAll(x => x.Artist.Contains(artist, StringComparison.InvariantCultureIgnoreCase));
             }
             return result;
         }
