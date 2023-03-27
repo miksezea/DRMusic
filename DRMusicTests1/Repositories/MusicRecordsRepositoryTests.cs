@@ -38,15 +38,13 @@ namespace DRMusic.Repositories.Tests
             Assert.AreEqual(1, repository.GetAll(title, artist).Count());
             title = "dfghjklæ";
             Assert.AreEqual(0, repository.GetAll(title).Count());
-
-
         }
+
         [TestMethod()]
         public void AddTest()
         {
             var actual = repository.GetAll();
             MusicRecord testRecord = repository.Add(newRecord);
-
 
             Assert.IsNotNull(testRecord);
             Assert.AreEqual(actual.Count + 1, repository.GetAll().Count());
