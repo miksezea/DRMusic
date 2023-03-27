@@ -28,7 +28,7 @@ namespace DRMusic.Repositories
             }
             if(title != null && artist != null)
             {
-                return result.FindAll(x=>x.Title.Contains(title, StringComparison.InvariantCultureIgnoreCase) && x.Artist.Contains(title, StringComparison.InvariantCultureIgnoreCase));
+                return result.FindAll(x=>x.Title.Contains(title, StringComparison.InvariantCultureIgnoreCase) && x.Artist.Contains(artist, StringComparison.InvariantCultureIgnoreCase));
 
             }
             return result;
