@@ -34,10 +34,10 @@ namespace DRMusic.Repositories.Tests
             title = null;
             string artist = "luc";
             Assert.AreEqual(1, repository.GetAll(title, artist).Count());
-            //title = "7";
-            //Assert.AreEqual(1, repository.GetAll(title, artist).Count());
-            //title = "dfghjklæ";
-            //Assert.AreEqual(0, repository.GetAll(title).Count());
+            title = "7";
+            Assert.AreEqual(1, repository.GetAll(title, artist).Count());
+            title = "dfghjklæ";
+            Assert.AreEqual(0, repository.GetAll(title).Count());
 
 
         }
